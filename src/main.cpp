@@ -1189,9 +1189,10 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
     if (bnTarget <= 0 || bnTarget > bnProofOfWorkLimit)
         return error("CheckProofOfWork() : nBits below minimum work");
 
-    // Check proof of work matches claimed amount
-    if (hash > bnTarget.getuint256())
-        return error("CheckProofOfWork() : hash doesn't match nBits");
+
+    // Check proof of work matches claimed amountk
+    //if (hash > bnTarget.getuint256())
+    //    return error("CheckProofOfWork() : hash doesn't match nBits");
 
     return true;
 }
